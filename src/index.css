@@ -1,0 +1,954 @@
+body {
+  background-color: #212121;
+}
+
+/*navbar */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.logout-button {
+  background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  color: #fff;
+  padding: 16px !important;
+  border-radius: 100px;
+}
+
+.logout-button:hover {
+  background: linear-gradient(144deg, #1e1e1e, 20%, #1e1e1e 50%, #1e1e1e);
+  color: rgb(255, 255, 255);
+  padding: 16px !important;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.bars {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+#checkbox:checked+.toggle #bar1 {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#checkbox:checked+.toggle #bar2 {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Ocultar menú en móvil por defecto */
+@media (max-width: 767px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+    background-color: #333;
+  }
+
+  .toggle {
+    display: flex;
+  }
+}
+
+
+
+/*Home*/
+.home-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.home-header {
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: white;
+}
+
+.quick-access {
+  margin: 20px 0;
+}
+
+.btn-quick {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-quick:hover {
+  background-color: #218838;
+}
+
+.alerts {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.alert-item {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 15px;
+  width: 30%;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.alert-item h3 {
+  font-size: 1.2rem;
+  color: #721c24;
+}
+
+.alert-item p {
+  color: #721c24;
+}
+
+@media only screen and (max-width: 600px) {
+  .alerts {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .alert-item {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+
+
+/*Login*/
+.login {
+  width: 340px;
+  height: 400px;
+  background: #2c2c2c;
+  padding: 47px;
+  padding-bottom: 57px;
+  color: #fff;
+  border-radius: 17px;
+  padding-bottom: 50px;
+  font-size: 1.3em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  /* Estilos para centrar el formulario en la pantalla */
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+  opacity: 1;
+  display: block;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 13px 18px;
+  margin: 20px 0 0 0;
+  font-size: 0.8em;
+  border-radius: 100px;
+  background: #3c3c3c;
+  color: #fff;
+}
+
+.login input:focus {
+  animation: bounce 1s;
+}
+
+.login input[type=submit],
+.login input[type=button],
+.h1 {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  padding: 13px;
+  margin: 40px 0 0 0;
+  border-radius: 500px;
+  font-weight: 600;
+  animation: bounce2 1.6s;
+}
+
+.h1 {
+  padding: 0;
+  position: relative;
+  top: -35px;
+  display: block;
+  margin-bottom: -0px;
+  font-size: 1.3em;
+}
+
+.btn {
+  background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  color: #fff;
+  padding: 16px !important;
+}
+
+.btn:hover {
+  background: linear-gradient(144deg, #1e1e1e, 20%, #1e1e1e 50%, #1e1e1e);
+  color: rgb(255, 255, 255);
+  padding: 16px !important;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.login input[type=text] {
+  animation: bounce 1s;
+}
+
+.login input[type=password] {
+  animation: bounce1 1.3s;
+}
+
+.ui {
+  font-weight: bolder;
+  background: -webkit-linear-gradient(#B563FF, #535EFC, #0EC8EE);
+  -webkit-text-fill-color: transparent;
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(0.25turn, #535EFC, #0EC8EE, #0EC8EE);
+  border-image-slice: 1;
+  display: inline;
+}
+
+@media only screen and (max-width: 600px) {
+  .login {
+    width: 70%;
+    padding: 3em;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-250px);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce1 {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce2 {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+/*Productos*/
+.productos-container {
+  padding: 20px;
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.productos-container h1,
+.productos-container h2 {
+  text-align: center;
+  color: #fff;
+}
+
+/* Estilos del formulario */
+.formulario-producto {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #444;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formulario-producto input {
+  padding: 8px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  background-color: #555;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.formulario-producto button {
+  padding: 8px;
+  background-color: #535EFC;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+  font-size: 0.9rem;
+}
+
+.formulario-producto button:hover {
+  background-color: #535EFC;
+}
+
+/* Contenedor de la tabla */
+.lista-productos {
+  margin-top: 15px;
+  overflow-x: auto;
+  /* Agrega desplazamiento horizontal en pantallas pequeñas */
+}
+
+/* Estilos de la tabla */
+.lista-productos table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #444;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.9rem;
+  /* Tamaño de fuente reducido */
+}
+
+.lista-productos th,
+.lista-productos td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  color: #fff;
+}
+
+.lista-productos th {
+  background-color: #28a745;
+  color: #333;
+}
+
+.lista-productos td {
+  background-color: #555;
+}
+
+.lista-productos td[colspan] {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+}
+
+/* Botón de acciones en la tabla */
+.lista-productos button {
+  padding: 6px;
+  background-color: #535EFC;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+  font-size: 0.85rem;
+}
+
+.lista-productos button:hover {
+  background-color: #535EFC;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .productos-container {
+    padding: 10px;
+  }
+
+  .formulario-producto {
+    max-width: 100%;
+    padding: 8px;
+  }
+
+  .formulario-producto input {
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+
+  .formulario-producto button {
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+
+  .lista-productos table {
+    font-size: 0.8rem;
+  }
+
+  .lista-productos th,
+  .lista-productos td {
+    padding: 6px;
+  }
+}
+
+/* Para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+
+  .productos-container h1,
+  .productos-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .lista-productos table {
+    display: block;
+    overflow-x: auto;
+    /* Agrega scroll horizontal en móviles */
+    white-space: nowrap;
+    /* Evita que se rompan las filas */
+  }
+
+  .lista-productos th,
+  .lista-productos td {
+    font-size: 0.75rem;
+    padding: 5px;
+  }
+
+  .lista-productos button {
+    font-size: 0.75rem;
+    padding: 4px;
+  }
+}
+
+
+/*Proveedores*/
+.gestion-proveedores {
+  padding: 20px;
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.gestion-proveedores h1,
+.gestion-proveedores h2 {
+  text-align: center;
+  color: #fff;
+}
+
+/* Estilos del formulario */
+.formulario-proveedor {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #444;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formulario-proveedor input {
+  padding: 8px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  background-color: #555;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.formulario-proveedor button {
+  padding: 8px;
+  background-color: #535EFC;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+  font-size: 0.9rem;
+}
+
+.formulario-proveedor button:hover {
+  background-color: #535EFC;
+}
+
+/* Contenedor de las tablas */
+.tabla-proveedores,
+.tabla-pedidos {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #444;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.9rem;
+  /* Tamaño de fuente reducido */
+}
+
+.tabla-proveedores th,
+.tabla-proveedores td,
+.tabla-pedidos th,
+.tabla-pedidos td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  color: #fff;
+}
+
+.tabla-proveedores th,
+.tabla-pedidos th {
+  background-color: white;
+  color: #333;
+}
+
+.tabla-proveedores td,
+.tabla-pedidos td {
+  background-color: #555;
+}
+
+.tabla-proveedores td[colspan],
+.tabla-pedidos td[colspan] {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+}
+
+/* Botón de acciones en la tabla */
+.tabla-proveedores button,
+.tabla-pedidos button {
+  padding: 6px;
+  background-color: #535EFC;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+  font-size: 0.85rem;
+}
+
+.tabla-proveedores button:hover,
+.tabla-pedidos button:hover {
+  background-color: #535EFC;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .gestion-proveedores {
+    padding: 10px;
+  }
+
+  .formulario-proveedor {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .formulario-proveedor input {
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+
+  .formulario-proveedor button {
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+
+  .tabla-proveedores,
+  .tabla-pedidos {
+    font-size: 0.8rem;
+  }
+
+  .tabla-proveedores th,
+  .tabla-proveedores td,
+  .tabla-pedidos th,
+  .tabla-pedidos td {
+    padding: 6px;
+  }
+}
+
+/* Para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+
+  .gestion-proveedores h1,
+  .gestion-proveedores h2 {
+    font-size: 1.2rem;
+  }
+
+  .tabla-proveedores,
+  .tabla-pedidos {
+    display: block;
+    overflow-x: auto;
+    /* Agrega scroll horizontal en móviles */
+    white-space: nowrap;
+    /* Evita que se rompan las filas */
+  }
+
+  .tabla-proveedores th,
+  .tabla-proveedores td,
+  .tabla-pedidos th,
+  .tabla-pedidos td {
+    font-size: 0.75rem;
+    padding: 5px;
+  }
+
+  .tabla-proveedores button,
+  .tabla-pedidos button {
+    font-size: 0.75rem;
+    padding: 4px;
+  }
+}
+
+
+
+
+/*Registro Ventas*/
+.registro-ventas {
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(228, 14, 14, 0.1);
+  color: #fff;
+}
+
+.registro-ventas h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.filtros {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filtros input {
+  padding: 10px;
+  width: 48%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #555;
+  color: white;
+}
+
+.filtros input[type="date"] {
+  max-width: 200px;
+}
+
+.tabla-ventas {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #444;
+  border-radius: 8px;
+}
+
+.tabla-ventas th,
+.tabla-ventas td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid white;
+  color: white;
+}
+
+.tabla-ventas th {
+  background-color: white;
+  color: black;
+}
+
+.tabla-ventas td {
+  background-color: #555;
+}
+
+.tabla-ventas td div {
+  margin: 2px 0;
+}
+
+.tabla-ventas td.columna-productos {
+  text-align: left;
+}
+
+.tabla-ventas td[colspan="4"] {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+}
+
+.grafico {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.grafico h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.grafico canvas {
+  width: 100% !important;
+  max-width: 800px;
+  height: auto;
+  background-color: #444;
+  border-radius: 8px;
+}
+
+
+
+
+
+/*Ventas*/
+.ventas-container {
+  padding: 20px;
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.busqueda-productos input {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  background-color: #555;
+  color: #fff;
+}
+
+.productos-buscados {
+  margin-top: 10px;
+}
+
+.producto-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #444;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 5px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.producto-item button {
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.producto-item button:hover {
+  background-color: #218838;
+}
+
+.lista-productos table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background-color: #444;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.lista-productos th,
+.lista-productos td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+  color: #fff;
+}
+
+.lista-productos th {
+  background-color: white;
+  color: #333;
+}
+
+.lista-productos td {
+  background-color: #555;
+}
+
+.metodo-pago select {
+  padding: 10px;
+  width: 100%;
+  max-width: 200px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #555;
+  color: #fff;
+}
+
+.total-venta {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.acciones button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.acciones button:hover {
+  background-color: #218838;
+}
+
+.acciones button:active {
+  background-color: #1e7e34;
+}
+
+.ticket {
+  margin-top: 20px;
+  background-color: #444;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ticket h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.ticket pre {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+
+/* Hacer que el menú sea responsivo */
+@media (max-width: 768px) {
+
+  /* En pantallas pequeñas, ocultamos el menú de navegación */
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    /* Ajusta según la altura del navbar */
+    left: 0;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-menu.active {
+    display: flex;
+    /* Muestra el menú cuando se activa */
+  }
+
+  /* Espaciado entre los items del menú */
+  .nav-item {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  /* Mostrar el menú hamburguesa en pantallas pequeñas */
+  .navbar-hamburger {
+    display: flex;
+  }
+}
